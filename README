@@ -4,23 +4,30 @@
   What is it?
   -----------
 
-  A visual demostration for basic decision tree.
+  A visual demonstration for basic decision tree.
 
 
   What is it for?
   ---------------
 
   This project is mainly for teaching goal and helps fresh data mining learner understand 
-  the Decision Tree better. With data customing and visual graph features, learners can 
+  the Decision Tree better. With data customising and visual graph features, learners can 
   experiment with their data and have a quick start with basic decision tree. All program 
-  and algorithm is come from book Data Mining, Concepts and Techniques, Second Edtion.
+  and algorithm is come from the book Data Mining, Concepts and Techniques, Second Edition.
+  
+  
+  How to use this?
+  ----------------
+  
+  You can use Apache Ant to make the program, or you can import the project with eclipse 3.3+, 
+  and launch the program with the IDE. For more detail, please check out the manual.
   
   
   Who writes this?
   ----------------
   
-  Luyao, Communication Unversity of China, Beijing.
-  You can concat me via Email: zluyuer@gmail.com
+  Luyao, Communication University of China, Beijing.
+  You can contact with me via Email: zluyuer@gmail.com
   
   
   

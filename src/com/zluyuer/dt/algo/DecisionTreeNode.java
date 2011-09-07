@@ -11,7 +11,7 @@ import java.util.List;
 public class DecisionTreeNode {
 
 	/**
-	 * 节点分类（当且仅当节点为叶子节点时有效
+	 * 节点分类（当且仅当节点为叶子节点时有效）
 	 */
 	public Class clazz; 
 	/**

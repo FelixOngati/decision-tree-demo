@@ -23,12 +23,11 @@ import com.zluyuer.dt.util.UIToolkit;
 
 public class DecisionTreeLogic {
 	
-	DecisionTreeApp app;
-	Prompter prompter;
-	String filePath;
+	private DecisionTreeApp app;
+	private Prompter prompter;
+	private String filePath;
 	
-	DataModel model = new DataModel();
-	boolean modified = false;
+	private DataModel model = new DataModel();
 
 	public DecisionTreeLogic(DecisionTreeApp app) {
 		this.app = app;
@@ -233,7 +232,6 @@ public class DecisionTreeLogic {
 	}
 	
 	public void saveData(String filePath) throws Exception {
-		modified = false;
 		PrintStream ps = new PrintStream(new File(filePath));
 		model.print(ps);
 		ps.close();
@@ -243,5 +241,9 @@ public class DecisionTreeLogic {
 	public void newData() {
 		model.reset();
 		updateUI();
+	}
+	
+	public String getFilePath() {
+		return filePath;
 	}
 }

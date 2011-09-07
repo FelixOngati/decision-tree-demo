@@ -259,7 +259,7 @@ public class DecisionTreeApp {
 				if (filePath != null) {
 					try {
 						logic.saveData(filePath);
-						shell.setText(TITLE + " - " + logic.filePath);
+						shell.setText(TITLE + " - " + logic.getFilePath());
 					} catch (Exception e) {
 						prompter.MsgErrorBox("数据存储错误:" + e.getMessage());
 						e.printStackTrace();

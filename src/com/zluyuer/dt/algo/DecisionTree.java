@@ -30,14 +30,14 @@ public class DecisionTree {
 		try {
 			System.out.println("开始训练决策树...");
 			
-			//默认所有数据类型都为STRING
+			//默认所有数据类型都为TEXT
 			List<Attribute> attrList = new ArrayList<Attribute>();
 			attrList.add(new Attribute("age", DataType.TYPE_TEXT, 0));
 			attrList.add(new Attribute("income", DataType.TYPE_TEXT, 1));
 			attrList.add(new Attribute("student", DataType.TYPE_TEXT, 2));
 			attrList.add(new Attribute("credit_rating", DataType.TYPE_TEXT, 3));
 			
-			List<String> dataList = TextFileUtil.readLines("data/training.csv");
+			List<String> dataList = TextFileUtil.readLines("data/training0.csv");
 			List<Tuple> tupleList = new ArrayList<Tuple>();
 			
 			//忽略第1行标题及第2行数据类型
