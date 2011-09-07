@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<project name="decisiontree" default="make" basedir=".">
+
+	<property name="name.product" value="decisiontree.jar" />
+	<property name="dir.src" location="src" />
+	<property name="dir.lib" location="lib" />
+	<property name="dir.build" location="build" />
+	<property name="dir.dist" location="dist" />
+	
+
+	<path id="classpath">
+		<fileset dir="${dir.lib}">
+			<include name="*.jar" />
+		</fileset>
+	</path>
+	
+	<target name="clean">
+		<delete dir="${dir.build}" />
+		<delete dir="${dir.dist}" />
+	</target>
+	
+	<target name="init" depends="clean" >
+		<tstamp/>
+		<mkdir dir="${dir.build}"/>
+		<mkdir dir="${dir.dist}"/>
+	</target>
+	
+	<target name="compile" depends="init">
+		<mkdir dir="${dir.build}/classes"/>
+		<javac destdir="${dir.build}/classes"
+		       debug="on"
+			   includeantruntime="on" >
+			<src path="${dir.src}" />
+			<classpath refid="classpath" />
+			<compilerarg line="-encoding utf-8" />
+		</javac>
+	</target>
+	
+	<target name="make" depends="compile">
+		<jar destfile="${dir.dist}/${name.product}"
+			basedir="${dir.build}/classes" >
+			<manifest>
+				<attribute name="Main-Class" value="com.zluyuer.dt.app.DecisionTreeApp" />
+				<attribute name="Class-Path" value="lib/jgraphx.jar lib/swt.jar" />
+			</manifest>
+		</jar>
+		<mkdir dir="${dir.dist}/lib"/>
+		<copy todir="${dir.dist}/lib">
+			<fileset dir="${dir.lib}" includes="**/*.jar"/>
+		</copy>
+	</target>
+	
+	<target name="launch" depends="make">
+		<java jar="${dir.dist}/${name.product}" fork="true" failonerror="true" />
+	</target>
+	
+</project>
