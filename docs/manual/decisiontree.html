@@ -164,13 +164,13 @@ function crawlDom(parent, ignore, depth, chapters, indent, enableSections) {
 <p>在决策树生成过程中，不仅有训练数据来构造树，还要有测试数据来检验树。由于本程序主要用于演示目的，因此测试集的判决主要依靠人眼观察进行。方法很简单：根据决策树从根到叶节点的顺序，依次取出待判决数据中的每一个属性比较，即可得到最后的分类结果。</p>
 <h1><a name="source-code"></a>源代码解析</h1>
 <h2><a name="algorithm"></a>ID3算法模块</h2>
-<p>本模块的所有代码位于源代码的com.zluyuer.dt.algo包下，DecisionTree为程序主入口点，能根据训练数据构造决策树模型。附带一个控制台打印决策树输出的工具类TreeHelper。其他细节请查看API文档。</p>
+<p>本模块的所有代码位于源代码的com.zluyuer.dt.algo包下。DecisionTree为程序主入口点，能根据训练数据构造决策树模型。附带一个控制台打印决策树输出的工具类TreeHelper。其他细节请查看API文档。</p>
 <p>下面的集合类图表示表明几个容器类之间的从属逻辑：</p>
 <img src="images/class-diagram-1.png" />
 <p>下面的决策树结构图表示树的节点信息：</p>
 <img src="images/class-diagram-2.png" />
 <h2><a name="interface"></a>界面及绘制模块</h2>
-<p>本GUI演示程序采用SWT库作为界面库，同时采用JGraphX作为图形绘制库，在此基础上封装了一个TreeGraphWindow类，作为决策树算法模型到可视图形适配器。因此，只需要下面几行代码就可以把决策树算法模型绘制在Swing窗口中（JGraphX是基于SWing开发）：</p>
+<p>本模块的所有代码位于源代码的com.zluyuer.dt.app包下。本GUI演示程序采用SWT库作为界面库，同时采用JGraphX作为图形绘制库，在此基础上封装了一个TreeGraphWindow类，作为决策树算法模型到可视图形适配器。因此，只需要下面几行代码就可以把决策树算法模型绘制在Swing窗口中（JGraphX是基于SWing开发）：</p>
 <pre>
 DecisionTreeNode root = DecisionTree.createTree(tupleList, attrList);
 TreeGraphWindow graphWindow = new TreeGraphWindow(root);
@@ -178,7 +178,7 @@ graphWindow.display();
 </pre>
 <p>另外，在与界面的数据交互中，使用了DataModel类来临时存储用户载入、定制和保存的各项决策树数据。其他细节请查看API文档。</p>
 <h2><a name="utility"></a>辅助工具模块</h2>
-<p>在本模块中主要实现了几个辅助工具类来读写文件、GUI辅助等。细节请查看源代码。</p>
+<p>本模块的所有代码位于源代码的com.zluyuer.dt.util包下。在本模块中主要实现了几个辅助工具类来读写文件、GUI辅助等。细节请查看源代码。</p>
 <hr size="1"> 
 DecisionTree Demo Version 1.0, Copyright &copy; Luyao, September 2011
 </body>
