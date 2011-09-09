@@ -85,9 +85,9 @@ function crawlDom(parent, ignore, depth, chapters, indent, enableSections) {
 <h1>DecisionTree Demo v1.0 用户手册</h1>
 <br/>
 <p>本项目主要应用于教学场景，目的在于帮助数据挖掘初学者快速理解决策树。使用者通过自定义各种训练数据生成不同的可视化决策树，能够更直观深入理解决策树的计算过程和结果。决策树生成算法采用了ID3，算法流程来自《数据挖掘：概念与技术（第2版）》一书，作者韩家炜，由机械工业出版社出版。</p>
-<p>在此特别感谢<a href="http://www.eclipse.org/swt/">SWT</a>和<a href="http://www.jgraph.com/">JGraphX</a>项目。欢迎有志之士共同参与开发，继续完善本项目。</p>
+<p>在此特别感谢<a href="http://www.eclipse.org/swt/" target="_blank">SWT</a>和<a href="http://www.jgraph.com/" target="_blank">JGraphX</a>项目。欢迎有志之士共同参与开发，继续完善本项目。</p>
 <p>This project is mainly for teaching goal and helps fresh data mining learner understand the Decision Tree better. With data customizing and visual graph features, learners can experiment with their training data and have a quick start with basic decision tree. ID3 is choosen to be the decisiontree generaing algorithm. The algorithm is from the book Data Mining, Concepts and Techniques, Second Edition, which is written by Jiawei Han and published by China Machine PRESS.</p>
-<p>Thanks for the <a href="http://www.eclipse.org/swt/">SWT</a> and <a href="http://www.jgraph.com/">JGraphX</a> project. All contribution to this project is warmly welcome.</p>
+<p>Thanks for the <a href="http://www.eclipse.org/swt/" target="_blank">SWT</a> and <a href="http://www.jgraph.com/" target="_blank">JGraphX</a> project. All contribution to this project is warmly welcome.</p>
 <p></p> 
 <br/>
 <h1>目录</h1>
@@ -96,11 +96,11 @@ function crawlDom(parent, ignore, depth, chapters, indent, enableSections) {
 <h1><a name="compile-and-run"></a>编译运行程序</h1>
 <h2><a name="fetch-source"></a>获取最新代码</h2> 
 <ul> 
-<li>通过浏览<a href="http://code.google.com/p/decision-tree-demo/">项目主页</a>，可以获取最新的有用信息</li>
-<li>单击<a href="http://decision-tree-demo.googlecode.com/files/decision-tree-demo-src.zip">此处</a>可以下载最新的源代码包</li>
-<li>单击<a href="http://decision-tree-demo.googlecode.com/files/decision-tree-demo-bin.zip">此处</a>可以下载最新的二进制包</li>
-<li>通过SVN checkout最新源代码：<a href="https://decision-tree-demo.googlecode.com/svn/trunk/">https://decision-tree-demo.googlecode.com/svn/trunk/</a></li>
-<li>如果想参与本项目，可以通过<a href="http://code.google.com/p/decision-tree-demo/issues/list">这里</a>查看最新的Issue List</li>
+<li>通过浏览<a href="http://code.google.com/p/decision-tree-demo/" target="_blank">项目主页</a>，可以获取最新的有用信息</li>
+<li>单击<a href="http://decision-tree-demo.googlecode.com/files/decision-tree-demo-src.zip" target="_blank">此处</a>可以下载最新的源代码包</li>
+<li>单击<a href="http://decision-tree-demo.googlecode.com/files/decision-tree-demo-bin.zip" target="_blank">此处</a>可以下载最新的二进制包</li>
+<li>通过SVN checkout最新源代码：<a href="https://decision-tree-demo.googlecode.com/svn/trunk/" target="_blank">https://decision-tree-demo.googlecode.com/svn/trunk/</a></li>
+<li>如果想参与本项目，可以通过<a href="http://code.google.com/p/decision-tree-demo/issues/list" target="_blank">这里</a>查看最新的Issue List</li>
 </ul>
 <h2><a name="project-structure"></a>项目结构</h2>
 <table border="1" cellspacing="0">
@@ -114,13 +114,13 @@ function crawlDom(parent, ignore, depth, chapters, indent, enableSections) {
 <tr><td>README</td><td>自述文件</td></tr>
 </table>
 <h2><a name="compile-by-ant"></a>使用ANT编译运行</h2>
-首先请确认系统中已安装了<a href="http://ant.apache.org/">ANT</a>软件。<br/>
+运行本程序需要安装<a href="http://www.oracle.com/technetwork/java/javase/downloads/index.html" target="_blank">JDK6</a>或以上版本，并确认系统中已安装了<a href="http://ant.apache.org/" target="_blank">ANT</a>软件。<br/>
 切换到项目的根目录，使用以下命令可以编译出二进制可执行文件：
 <pre>Prompter> ant</pre>
 使用下面命令可以编译并运行二进制可执行文件：
 <pre>Prompter> ant launch</pre>
 <h2><a name="compile-by-eclpse"></a>使用Eclipse编译运行</h2>
-本项目包含了一个<a href="http://www.eclipse.org/">Eclipse</a>工程，可以使用Eclipse 3.3及以上版本打开。启动类有下面三个：<br/>
+本项目包含了一个<a href="http://www.eclipse.org/" target="_blank">Eclipse</a>工程，可以使用Eclipse 3.3及以上版本打开。启动类有下面三个：<br/>
 <ul> 
 <li>com.zluyuer.dt.algo.DecisionTree（控制台输出的算法实现类）</li>
 <li>com.zluyuer.dt.app.DecisionTreeApp（GUI演示程序输出的应用程序类）</li>
@@ -132,7 +132,7 @@ function crawlDom(parent, ignore, depth, chapters, indent, enableSections) {
 <br/><br/>
 <h1><a name="training-data"></a>维护训练数据</h1>
 <h2><a name="data-format"></a>数据规格说明</h2>
-<p>训练数据采用纯文本存储，后缀名为.txt或<a href="http://zh.wikipedia.org/wiki/CSV">.csv</a>，文本为UTF-8 without <a href="http://en.wikipedia.org/wiki/Byte_order_mark">BOM</a>格式。<br/>
+<p>训练数据采用纯文本存储，后缀名为.txt或<a href="http://zh.wikipedia.org/wiki/CSV" target="_blank">.csv</a>，文本为UTF-8 without <a href="http://en.wikipedia.org/wiki/Byte_order_mark" target="_blank">BOM</a>格式。<br/>
 下面是训练数据training0.csv的截图示例：</p>
 <img src="images/training-data-demo.jpg" />
 <ul> 
